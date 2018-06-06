@@ -18,6 +18,7 @@ Use `ng build --configuration staging` command for a staging build.
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run, declare environment variable by using `env CHROME_BIN = /usr/bin/chromium`.
 
 ## Running end-to-end tests
 
