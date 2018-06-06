@@ -24,6 +24,10 @@ To run, declare environment variable by using `env CHROME_BIN = /usr/bin/chromiu
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Project structure
+
+Project structure can be found in following link: [Angular 5 Structure Multiple Modules](https://www.technouz.com/4644/angular-5-app-structure-multiple-modules/)
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
