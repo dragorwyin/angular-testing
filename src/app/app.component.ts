@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from '../environments/environment';
 import Prices from './prices';
 import { cent } from './shared/decorators/cent';
-
-///////// ----------------------------------------
+import applyMixins from './shared/mixins/apply-mixins';
+import { Activable, isActivable } from './shared/mixins/activable';
 
 @Component({
   selector: 'app-root',
@@ -24,4 +24,3 @@ export class AppComponent implements OnInit {
     this.centsMethod = prices.sum(3000, 5000);
   }
 }
-
