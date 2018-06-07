@@ -1,25 +1,21 @@
-const isMethodDecorator = descriptor => descriptor;
-
 export function Cent(
   target: Object,
   propertyKey: string,
   descriptor: PropertyDescriptor
 ): any {
   // It is method decorator.
-  if (isMethodDecorator(descriptor)) {
-    const oldValue = descriptor.value;
-    descriptor.value = function () {
-      const args = [];
+  const oldValue = descriptor.value;
+  descriptor.value = function () {
+    const args = [];
 
-      for (let i = 0; i < arguments.length; i++) {
-        args[i] = (arguments[i] / 100);
-      }
+    for (let i = 0; i < arguments.length; i++) {
+      args[i] = (arguments[i] / 100);
+    }
 
-      return oldValue.apply(null, args);
-    };
+    return oldValue.apply(null, args);
+  };
 
-    return descriptor;
-  }
+  return descriptor;
 }
 
 export function cent(
