@@ -1,19 +1,31 @@
-<h4>{{ hero.name | uppercase }} Details</h4>
-<div>
-  <span>id: </span>{{ hero.id }}
+<div class="grid-container margin-top-2">
+  <div class="grid-x">
+    <div class="cell small-12" [class.medium-6]="selectedHero">
+      <h4 class="margin-top-1">My Heroes</h4>
+      <ul class="heroes">
+        <li
+          *ngFor="let hero of heroes"
+          (click)="onSelect(hero)"
+          [class.selected]="hero === selectedHero">
+          <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="cell small-12 medium-6" *ngIf="selectedHero">
+      <div>
+        <h4>{{ selectedHero.name | uppercase }} Details</h4>
+        <div>
+          <span>id: </span>{{ selectedHero.id }}
+        </div>
+        <div>
+          <span>name: </span>{{ selectedHero.name }}
+        </div>
+        <div>
+          <label>
+            <input [(ngModel)]="hero.name" placeholder="name">
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div>
-  <span>name: </span>{{ hero.name }}
-</div>
-<div>
-  <label>
-    <input [(ngModel)] = "hero.name" placeholder="name">
-  </label>
-</div>
-
-<h4>My Heroes</h4>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <span class="badge">{{ hero.id }}</span> {{ hero.name }}
-  </li>
-</ul>
