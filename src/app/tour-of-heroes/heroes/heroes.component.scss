@@ -1,52 +1,45 @@
 @import '~src/scss/variables';
 
 .selected {
-  background-color: #CFD8DC;
+  background-color: darken($light-gray, 7.5%);
   color: $white;
 }
 
 .heroes {
-  list-style-type: none;
-  margin: 0 0 2em 0;
+  margin: 0 0 2em;
   padding: 0;
   width: 15em;
 
   li {
-    background-color: #EEE;
+    align-items: center;
+    background-color: $light-gray;
     border-radius: 4px;
     cursor: pointer;
-    height: 1.6em;
-    left: 0;
-    margin: .5em;
-    padding: .3em 0;
-    position: relative;
+    display: flex;
+    margin-bottom: .5rem;
+    transition: .5s;
 
     &:hover {
-      background-color: #DDD;
+      background-color: darken($light-gray, 5%);
       color: $light-gray-color;
       left: .1em;
     }
 
     &.selected:hover {
-      background-color: #BBD8DC;
+      background-color: darken($light-gray, 10%);
       color: $white;
     }
-  }
-
-  .text {
-    position: relative;
-    top: -3px;
   }
 
   .badge {
     background-color: $light-gray-color;
     border-radius: 4px 0 0 4px;
-    color: #fefefe;
-    font-size: small;
+    color: $white;
+    font-size: .7rem;
+    height: 100%;
     margin-right: .8em;
-    padding: .3em .7em 0 .7em;
+    padding: .5em .7em .4em;
     position: relative;
-    top: -4px;
+    top: 0;
   }
-
 }
