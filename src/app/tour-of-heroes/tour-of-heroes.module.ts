@@ -4,6 +4,7 @@ import { TourOfHeroesComponent } from './tour-of-heroes.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroService } from './services/hero.service';
 
 @NgModule({
   imports: [
@@ -13,6 +14,9 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
   declarations: [TourOfHeroesComponent, HeroesComponent, HeroDetailComponent],
   exports: [
     TourOfHeroesComponent
+  ],
+  providers: [
+    HeroService
   ]
 })
 export class TourOfHeroesModule { }

@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tour-of-heroes.component.scss']
 })
 export class TourOfHeroesComponent implements OnInit {
-
   title = 'Tour of Heroes';
 
   constructor() { }
