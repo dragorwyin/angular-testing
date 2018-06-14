@@ -11,21 +11,6 @@
         </li>
       </ul>
     </div>
-    <div class="cell small-12 medium-6" *ngIf="selectedHero">
-      <div>
-        <h4>{{ selectedHero.name | uppercase }} Details</h4>
-        <div>
-          <span>id: </span>{{ selectedHero.id }}
-        </div>
-        <div>
-          <span>name: </span>{{ selectedHero.name }}
-        </div>
-        <div>
-          <label>
-            <input [(ngModel)]="hero.name" placeholder="name">
-          </label>
-        </div>
-      </div>
-    </div>
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
   </div>
 </div>

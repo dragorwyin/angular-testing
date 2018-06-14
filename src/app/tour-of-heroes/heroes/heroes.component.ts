@@ -9,11 +9,6 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm',
-  };
-
   heroes: Array<Hero> = HEROES;
   selectedHero: Hero;
 
@@ -24,7 +19,6 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
-    console.log(this.selectedHero);
   }
 
 }
