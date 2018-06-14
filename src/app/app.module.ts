@@ -2,15 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MixinTestComponent } from './mixin-test/mixin-test.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MixinTestComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

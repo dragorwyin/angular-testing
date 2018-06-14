@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Activable, isActivable } from '../shared/mixins/activable';
-import applyMixins from '../shared/mixins/apply-mixins';
 import SmartObject from './smart-object';
+import { isActivable } from '../../shared/mixins/activable';
 
 @Component({
   selector: 'app-mixin-test',

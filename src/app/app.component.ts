@@ -1,9 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from '../environments/environment';
-import Prices from './prices';
-import { cent } from './shared/decorators/cent';
-import applyMixins from './shared/mixins/apply-mixins';
-import { Activable, isActivable } from './shared/mixins/activable';
 
 @Component({
   selector: 'app-root',
@@ -12,15 +7,7 @@ import { Activable, isActivable } from './shared/mixins/activable';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  url = environment.url;
-
-  centsMethod = 0;
-
-  @cent
-  centsProperty = 300;
 
   ngOnInit(): void {
-    const prices = new Prices();
-    this.centsMethod = prices.sum(3000, 5000);
   }
 }
