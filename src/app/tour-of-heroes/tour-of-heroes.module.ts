@@ -7,6 +7,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './services/hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import { TourOfHeroesRoutingModule } from './/tour-of-heroes-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { TourOfHeroesRoutingModule } from './/tour-of-heroes-routing.module';
     TourOfHeroesComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   exports: [
     TourOfHeroesComponent,

@@ -1,0 +1,14 @@
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell small-12">
+      <h4>Top Heroes</h4>
+    </div>
+    <div class="cell small-12 medium-6 large-4" *ngFor="let hero of heroes">
+      <a class="card">
+        <div class="card-divider">
+          {{ hero.name }}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
