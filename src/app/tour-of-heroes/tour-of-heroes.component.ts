@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-tour-of-heroes',
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class TourOfHeroesComponent implements OnInit {
   title = 'Tour of Heroes';
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit() {
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }
