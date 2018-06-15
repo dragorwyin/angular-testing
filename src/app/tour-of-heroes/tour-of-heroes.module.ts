@@ -6,13 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './services/hero.service';
 import { MessagesComponent } from './messages/messages.component';
-import { RoutingModule } from './routing.module';
+import { TourOfHeroesRoutingModule } from './/tour-of-heroes-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    RoutingModule,
+    TourOfHeroesRoutingModule,
   ],
   declarations: [
     TourOfHeroesComponent,

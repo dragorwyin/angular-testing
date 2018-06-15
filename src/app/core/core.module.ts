@@ -4,16 +4,14 @@ import { TestingModule } from '../testing/testing.module';
 import { CoreComponent } from './core.component';
 import { TourOfHeroesModule } from '../tour-of-heroes/tour-of-heroes.module';
 import { HeaderComponent } from './header/header.component';
-
-import { RouterModule, Routes } from '@angular/router';
-import { routes } from '../tour-of-heroes/routing.module';
+import { CoreRoutingModule } from './/core-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     TestingModule,
     TourOfHeroesModule,
-    RouterModule.forRoot(routes),
+    CoreRoutingModule,
   ],
   declarations: [
     CoreComponent,
@@ -21,7 +19,6 @@ import { routes } from '../tour-of-heroes/routing.module';
   ],
   exports: [
     CoreComponent,
-    RouterModule,
   ]
 })
 export class CoreModule { }
