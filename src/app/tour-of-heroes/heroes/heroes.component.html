@@ -1,6 +1,6 @@
 <div class="grid-container">
   <div class="grid-x grid-margin-x">
-    <div class="cell small-12" [class.medium-6]="selectedHero">
+    <div class="cell small-12">
       <h4>My Heroes</h4>
       <ul class="heroes">
         <li
@@ -9,6 +9,15 @@
           <span class="badge">{{ hero.id }}</span> {{ hero.name }}
         </li>
       </ul>
+    </div>
+    <div class="cell small-12">
+      <label>Hero Name:</label>
+      <div class="input-group">
+        <input class="input-group-field" type="text" #heroName>
+        <div class="input-group-button">
+          <input class="primary button" (click)="add(heroName.value); heroName.value=''" value="Submit">
+        </div>
+      </div>
     </div>
   </div>
 </div>
