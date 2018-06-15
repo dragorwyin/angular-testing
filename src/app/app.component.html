@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Testing Application</title>
+    <title>{{ title }}</title>
   </head>
-  <body class="container">
-    <div class="grid-x grid-container text-center">
-      <div class="cell small-12">
-        <h1>
-          Welcome to {{ title }}!
-        </h1>
-        <app-core></app-core>
-      </div>
-    </div>
+  <body class="container margin-top-0">
+    <app-core [title]="title"></app-core>
   </body>
 </html>
