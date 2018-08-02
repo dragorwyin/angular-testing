@@ -10,7 +10,11 @@
     "start": "ng serve --poll=2000 --open",
     "extract-langs": "ng xi18n --output-path i18n --i18n-locale en && xliffmerge --profile xliffmerge.json en pl de",
     "start-pl": "ng serve --configuration=pl --poll=2000 --open",
-    "start-de": "ng serve --configuration=de --poll=2000 --open"
+    "start-de": "ng serve --configuration=de --poll=2000 --open",
+    "production": "ng build --configuration=production --base-href /en/",
+    "production-pl": "ng build --configuration=production-pl --base-href /pl/",
+    "production-de": "ng build --configuration=production-de --base-href /de/",
+    "build-all": "npm run production && npm run production-pl && npm run production-de"
   },
   "private": true,
   "dependencies": {

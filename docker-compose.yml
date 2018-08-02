@@ -6,4 +6,4 @@ services:
         ports:
             - "3000:80"
         volumes:
-            - "./dist/angular-testing:/usr/share/nginx/html"
+            - "./dist/:/usr/share/nginx/html"

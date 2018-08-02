@@ -39,6 +39,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "outputPath": "dist/en/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -66,19 +67,67 @@
               "vendorChunk": false,
               "buildOptimizer": true
             },
-            "pl": {
+            "production-pl": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
               "aot": true,
-              "outputPath": "dist/angular-testing-pl",
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/pl/",
               "i18nFile": "src/i18n/messages.pl.xlf",
               "i18nFormat": "xlf",
-              "i18nLocale": "pl"
+              "i18nLocale": "pl",
+              "i18nMissingTranslation": "error"
+            },
+            "production-de": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "outputPath": "dist/de",
+              "i18nFile": "src/i18n/messages.de.xlf",
+              "i18nFormat": "xlf",
+              "baseHref": "/de/",
+              "deployUrl": "/de/",
+              "i18nLocale": "de",
+              "i18nMissingTranslation": "error"
+            },
+            "pl": {
+              "aot": true,
+              "outputPath": "dist/pl",
+              "i18nFile": "src/i18n/messages.pl.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "pl",
+              "i18nMissingTranslation": "error"
             },
             "de": {
               "aot": true,
-              "outputPath": "dist/angular-testing-de",
+              "outputPath": "dist/de/",
               "i18nFile": "src/i18n/messages.de.xlf",
               "i18nFormat": "xlf",
-              "i18nLocale": "de"
+              "i18nLocale": "de",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -89,16 +138,19 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-testing:build:production"
+              "browserTarget": "angular-testing:build:production",
+              "servePath": "/en/"
             },
             "staging": {
               "browserTarget": "angular-testing:build:staging"
             },
             "pl": {
-              "browserTarget": "angular-testing:build:pl"
+              "browserTarget": "angular-testing:build:pl",
+              "servePath": "/pl/"
             },
             "de": {
-              "browserTarget": "angular-testing:build:de"
+              "browserTarget": "angular-testing:build:de",
+              "servePath": "/de/"
             }
           }
         },
