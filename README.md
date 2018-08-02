@@ -10,6 +10,50 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 To dockerize production, use `docker-compose build` and `docker-compose up` commands.
 
+## Add Translations
+
+To add translations, you need to add languages with following steps:
+
+### Add language to ```package.json```
+
+Append language as "next_language" to ```extract_langs``` script:
+
+```json
+"extract-langs": "ng xi18n --output-path i18n --i18n-locale en && xliffmerge --profile xliffmerge.json en pl de next_language",
+```
+
+Add another scripts with new language:
+
+```json
+  "start-next_language": "ng serve --configuration=next_language --poll=2000 --open"
+```
+
+### Add new language to ```angular.json``` (AOT)
+
+```json
+{
+  "...": "...",
+  "configurations": {
+    "...": "...",
+    "next_language": {
+      "aot": true,
+      "outputPath": "dist/angular-testing-next_language",
+      "i18nFile": "src/i18n/messages.next_language.xlf",
+      "i18nFormat": "xlf",
+      "i18nLocale": "next_language"
+    }
+  },
+  "...": "...",
+  "serve": {
+    "...": "...",
+    "next_language": {
+      "browserTarget": "angular-testing:build:next_language"
+    }
+  }
+}
+
+```
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
@@ -23,6 +67,12 @@ Use `ng build --configuration staging` command for a staging build.
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 To run, declare environment variable by using `env CHROME_BIN = /usr/bin/chromium`.
+
+## Translating
+
+To merge translations to different languages, use npm run translate-{lang}.
+
+That concept was realised with [xliffmerge article by martinroob](https://github.com/martinroob/ngx-i18nsupport/wiki/Tutorial-for-using-xliffmerge-with-angular-cli).
 
 ## Running end-to-end tests
 

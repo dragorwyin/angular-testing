@@ -65,6 +65,20 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            "pl": {
+              "aot": true,
+              "outputPath": "dist/angular-testing-pl",
+              "i18nFile": "src/i18n/messages.pl.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "pl"
+            },
+            "de": {
+              "aot": true,
+              "outputPath": "dist/angular-testing-de",
+              "i18nFile": "src/i18n/messages.de.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "de"
             }
           }
         },
@@ -79,6 +93,12 @@
             },
             "staging": {
               "browserTarget": "angular-testing:build:staging"
+            },
+            "pl": {
+              "browserTarget": "angular-testing:build:pl"
+            },
+            "de": {
+              "browserTarget": "angular-testing:build:de"
             }
           }
         },

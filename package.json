@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "ng serve --poll=2000 --open",
+    "extract-langs": "ng xi18n --output-path i18n --i18n-locale en && xliffmerge --profile xliffmerge.json en pl de",
+    "start-pl": "ng serve --configuration=pl --poll=2000 --open",
+    "start-de": "ng serve --configuration=de --poll=2000 --open"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +27,7 @@
     "core-js": "^2.5.4",
     "foundation-sites": "^6.4.4-rc1",
     "hoek": "^5.0.3",
+    "ngx-i18nsupport": "^0.16.3",
     "rxjs": "^6.0.0",
     "ultron": "^1.1.1",
     "zone.js": "^0.8.26"
