@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+    app:
+        build: ./docker-compose/nginx/
+        ports:
+            - "3000:80"
+        volumes:
+            - "./dist/angular-testing:/usr/share/nginx/html"
