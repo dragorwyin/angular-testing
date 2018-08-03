@@ -1,0 +1,7 @@
+.grid-container
+  .grid-x.grid-margin-x
+    .cell.small-12
+      h4
+    .cell.small-12.medium-6.large-3(*ngFor="let hero of heroes")
+      a.card(routerLink="/tour-of-heroes/details/{{ hero.id }}")
+        .card-divider {{ hero.name }}

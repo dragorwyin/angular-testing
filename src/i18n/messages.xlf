@@ -6,14 +6,15 @@
         <source>Translated text</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">2</context>
         </context-group>
+        <note priority="1" from="description">zxczxc</note>
       </trans-unit>
       <trans-unit id="17da512957222bf1b07b8ded502f11895cece1c6" datatype="html">
         <source>Another text added later</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">3</context>
         </context-group>
         <note priority="1" from="description">h3 text</note>
       </trans-unit>

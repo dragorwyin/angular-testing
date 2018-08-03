@@ -4,17 +4,11 @@
     <body>
       <trans-unit id="4ac459a568c0babe74c41ebccd6111f655f5ed76" datatype="html">
         <source>Translated text</source><target state="translated">Przetłumaczony tekst</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-      </trans-unit>
+        
+      <context-group purpose="location"><context context-type="sourcefile">app/app.component.ts</context><context context-type="linenumber">2</context></context-group><note from="description" priority="1">zxczxc</note></trans-unit>
     <trans-unit id="17da512957222bf1b07b8ded502f11895cece1c6" datatype="html">
         <source>Another text added later</source><target state="translated">Inny tekst dodany później</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-      <note from="description" priority="1">h3 text</note></trans-unit></body>
+        
+      <note from="description" priority="1">h3 text</note><context-group purpose="location"><context context-type="sourcefile">app/app.component.ts</context><context context-type="linenumber">3</context></context-group></trans-unit></body>
   </file>
 </xliff>

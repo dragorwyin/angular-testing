@@ -1,0 +1,11 @@
+nav.grid-container
+  .grid-x
+    ul.breadcrumbs
+      li(routerLink="dashboard" routerLinkActive="disabled")
+        a Dashboard
+      li(routerLink="heroes" routerLinkActive="disabled")
+        a Heroes
+router-outlet.text-left
+.text-center
+  button.secondary.button.margin-vertical-2((click)="goBack()") Go Back
+app-messages
